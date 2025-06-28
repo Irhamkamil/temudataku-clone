@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+:root {
+  --fonts-Inter: "Inter", sans-serif;
+  --color-primary: #0284c7;
+  --color-primaryLight: #0369a1;
+  --color-primaryDark: #075985;
+}
+
+.bg-image {
+  background-image: url("./hero-image.jpg");
+}
+
+/* Custom Scrollbar minimal */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(2, 132, 199, 0.5);
+  border-radius: 10px;
+}
+
+* {
+  font-family: var(--fonts-Inter);
+}
