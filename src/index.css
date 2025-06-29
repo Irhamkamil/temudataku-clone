@@ -3,23 +3,25 @@
 
 :root {
   --fonts-Inter: "Inter", sans-serif;
-  --color-primary: #0284c7;
-  --color-primaryLight: #0369a1;
-  --color-primaryDark: #075985;
+  --color-primary: rgb(22 163 74);
 }
 
 .bg-image {
   background-image: url("./hero-image.jpg");
 }
 
+.text-primary {
+  color: var(--color-primary);
+}
+
 /* Custom Scrollbar minimal */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(2, 132, 199, 0.5);
+  background-color: var(--color-secondary);
   border-radius: 10px;
 }
 

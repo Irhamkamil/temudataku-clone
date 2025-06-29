@@ -1,36 +1,90 @@
 import React from "react";
 
-const services = [
+const programs = [
   {
-    title: "Dataset Lengkap",
+    title: "Mentoring 1-on-1",
     description:
-      "Ribuan dataset lengkap dari berbagai kategori yang terus diperbarui."
+      "Dapatkan bimbingan langsung dari profesional berpengalaman di bidang data science.",
+    icon: (
+      <svg
+        className="w-10 h-10 text-blue-600"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14v7m-6-7h12"
+        />
+      </svg>
+    )
   },
   {
-    title: "Mudah Diakses",
+    title: "Bootcamp Data Analyst",
     description:
-      "Antarmuka yang user-friendly untuk mempermudah pencarian data Anda."
+      "Belajar secara intensif dengan materi lengkap dan praktek proyek nyata.",
+    icon: (
+      <svg
+        className="w-10 h-10 text-blue-600"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 20h9M12 4h9M4 12h16M4 12l4-4M4 12l4 4"
+        />
+      </svg>
+    )
   },
   {
-    title: "Analisis Insight",
-    description: "Dapatkan insight berharga dari data yang akurat."
+    title: "Latihan Praktik",
+    description:
+      "Sesi latihan untuk meningkatkan kemampuan di bidang data science dan machine learning.",
+    icon: (
+      <svg
+        className="w-10 h-10 text-blue-600"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 17v-6a4 4 0 118 0v6"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 21v-4m-6-4h12"
+        />
+      </svg>
+    )
   }
 ];
 
-export default function Services() {
+export default function Programs() {
   return (
-    <section className="py-16 bg-white text-center">
-      <h2 className="text-3xl font-bold mb-12 text-gray-900">
-        Kenapa Memilih TemuDataKu?
+    <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
+      <h2 className="text-3xl font-bold text-primary mb-12 text-center">
+        Layanan Kami
       </h2>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-4">
-        {services.map(({ title, description }, id) => (
+      <div className="grid md:grid-cols-3 gap-8">
+        {programs.map(({ title, description, icon }) => (
           <div
-            key={id}
-            className="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition"
+            key={title}
+            className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
           >
-            <h3 className="text-xl font-semibold text-primary mb-4">{title}</h3>
-            <p className="text-gray-700">{description}</p>
+            <div>{icon}</div>
+            <h3 className="mt-4 text-xl font-semibold text-blue-900">
+              {title}
+            </h3>
+            <p className="mt-2 text-blue-700">{description}</p>
           </div>
         ))}
       </div>
