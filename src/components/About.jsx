@@ -7,7 +7,7 @@ const About = () => {
         Tentang TemuDataKu
       </h1>
       <section className="w-full h-full">
-        <div className="flex justify-center items-center gap-2">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-2">
           <div className="grid grid-cols-2 gap-4 mt-6 max-w-md mx-auto flex-1">
             {sessions.map(({ id, imageUrl, text, className }) => (
               <div
@@ -36,10 +36,10 @@ const About = () => {
             </h2>
 
             <div className="relative flex items-start gap-6">
-              <div className="absolute -top-5 -left-10 text-[80px] font-bold text-aksen select-none leading-none">
+              <div className="absolute hidden xl:flex lg:-top-5 lg:-left-10 text-[80px] font-bold text-aksen select-none leading-none">
                 1
               </div>
-              <div className="text-[40px] font-bold text-aksen select-none leading-none">
+              <div className="text-[40px] hidden xl:flex font-bold text-aksen select-none leading-none">
                 #
               </div>
               <div className="flex-1">
@@ -49,19 +49,19 @@ const About = () => {
                 <h3 className="text-secondary text-lg font-semibold mb-2">
                   Terbaik dalam Mentoring Data Science
                 </h3>
-                <p className="text-gray-500 mb-4 leading-relaxed">
+                <p className="text-gray-500 mb-4 leading-relaxed text-justify">
                   Dapatkan bimbingan dari mentor untuk menjawab keraguan mu
                   dalam belajar data science. khusus untuk kamu yang belajar
                   otodidak, kami memberikan akses 1 on 1 maupun kelompok untuk
                   mentoring dan tentu dengan harga yang lebih terjangkau dari
                   mengikuti bootcamp.
                 </p>
-                <button
+                {/* <button
                   className="border border-green-600 text-green-600 px-5 py-2 rounded hover:bg-green-600 hover:text-white transition-colors duration-300"
                   type="button"
                 >
                   view more
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ export default function Hero() {
           <h1 className="text-md md:text-2xl font-semibold text-white leading-tight">
             Bosan Belajar Data Science Sendirian?
           </h1>
-          <p className="mt-6 font-extrabold text-white text-4xl md:text-6xl">
+          <p className="mt-6 font-bold text-white text-4xl md:text-6xl">
             Yuk, Temu Mentor di TemuDataku!
           </p>
           <button className="mt-8 bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition">

@@ -29,3 +29,24 @@ export const navLinks = [
   { to: "/bootcamp", label: "Bootcamp" },
   { to: "/latihan", label: "Latihan" }
 ];
+
+export const services = [
+  {
+    title: "1-on-1 & Group Mentoring",
+    description:
+      "Dapatkan bimbingan langsung dari profesional berpengalaman di bidang data science.",
+    imageUrl: "/services-img1.jpg"
+  },
+  {
+    title: "Bootcamp Data Analyst",
+    description:
+      "Belajar secara intensif dengan materi lengkap dan praktek proyek nyata.",
+    imageUrl: "/services-img3.jpg"
+  },
+  {
+    title: "Latihan Praktik",
+    description:
+      "Sesi latihan untuk meningkatkan kemampuan di bidang data science dan machine learning.",
+    imageUrl: "/services-img2.jpg"
+  }
+];

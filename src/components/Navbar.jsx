@@ -31,9 +31,9 @@ export default function Navbar() {
             inactiveClass="hover:text-green-400 transition"
           />
         </div>
-        <div className="flex space-x-4 bg-green-600 py-2 px-4 rounded-md text-white font-semibold hover:bg-green-700 transition ">
-          <button>Login</button>
-        </div>
+        <button className="flex space-x-4 bg-green-600 py-2 px-4 rounded-md text-white font-semibold hover:bg-green-700 transition ">
+          Login
+        </button>
       </div>
     </nav>
   );
