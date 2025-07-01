@@ -9,7 +9,7 @@
 }
 
 .bg-image {
-  background-image: url("./hero-image.jpg");
+  background-image: url("/hero-image.jpg");
 }
 
 .transition {
