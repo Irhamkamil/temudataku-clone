@@ -1,6 +1,8 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <div className=" relative w-full h-[500px] bg-cover bg-center bg-no-repeat mt-30 md:mt-0 bg-image">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-300/50 via-gray-800/40 to-gray-400/60"></div>
@@ -12,7 +14,10 @@ export default function Hero() {
           <p className="mt-6 font-bold text-white text-4xl md:text-6xl">
             Yuk, Temu Mentor di TemuDataku!
           </p>
-          <button className="mt-8 bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition">
+          <button
+            onClick={() => navigate("/login")}
+            className="mt-8 bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition"
+          >
             Daftar Sekarang
           </button>
         </div>

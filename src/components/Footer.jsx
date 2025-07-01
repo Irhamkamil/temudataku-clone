@@ -38,7 +38,7 @@ export default function Footer() {
       </div>
 
       {/* Social Media dan Contact */}
-      <div className="md:w-1/3 flex flex-col items-center sm:items-start my-20 ">
+      <div className="md:w-1/3 flex flex-col items-center sm:items-start mb-10 lg:my-20 ">
         <h3 className="font-semibold text-white mb-4">Social Media</h3>
         <div className="flex space-x-4 mb-4">
           <a

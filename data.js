@@ -54,3 +54,30 @@ export const users = [
   { email: "user2@example.com", password: "examplePassword2" }
   // Anda bisa tambah user lain di sini
 ];
+
+export const practiceItems = [
+  {
+    title: "Data Analysis - Customer Analysis",
+    description:
+      "Kamu akan belajar cara menganalisis pelanggan, mencari trend yang tersembunyi, dan bagaimana prospek pelanggan kedepannya.",
+    onClick: () => alert("Memulai latihan Data Analysis - Customer Analysis")
+  },
+  {
+    title: "Machine Learning - NLP",
+    description:
+      "Kamu akan belajar bagaimana cara mengolah teks, menganalisis sentiment, dan juga klasifikasi teks seperti spam detection dan sejenisnya.",
+    onClick: () => alert("Memulai latihan Machine Learning - NLP")
+  },
+  {
+    title: "Data Scientist - Churn Prediction",
+    description:
+      "Kamu akan belajar mulai dari membersihkan data dan membuat model untuk memprediksi kemungkinan pelanggan melakukan churn.",
+    onClick: () => alert("Memulai latihan Data Scientist - Churn Prediction")
+  },
+  {
+    title: "Machine Learning - Classification",
+    description:
+      "Kamu akan belajar mulai dari pemrosesan data seperti feature enginering, encoding, dan labelling. Kamu juga akan menggunakan package untuk melakukan pemodelan klasifikasi.",
+    onClick: () => alert("Memulai latihan Machine Learning - Classification")
+  }
+];

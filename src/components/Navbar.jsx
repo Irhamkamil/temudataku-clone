@@ -58,7 +58,7 @@ export default function Navbar() {
           scrolled ? "bg-white shadow-md" : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3 md:py-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 pt-4 md:py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img src="/logo.webp" alt="Temudataku Logo" className="w-25" />
