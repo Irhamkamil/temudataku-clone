@@ -1,41 +1,57 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { users } from "../../data"; // pastikan path sesuai lokasi file data.js
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validasi sederhana
+    // Cek input kosong
     if (!email || !password) {
       setErrorMsg("Mohon isi email dan password.");
       return;
     }
 
-    // Simpan email ke localStorage sebagai contoh simpan data user
-    localStorage.setItem("userEmail", email);
+    // Cari user yang cocok
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
 
-    // Reset pesan error dan form (opsional)
-    setErrorMsg("");
-    setEmail("");
-    setPassword("");
+    if (user) {
+      // Login berhasil
+      setErrorMsg("");
 
-    alert("Login berhasil! (simulasi, data tersimpan di localStorage)");
-    // Di sini Anda bisa arahkan ke halaman lain, pakai navigate, dll.
+      // Simpan info login ke localStorage (bisa sesuaikan)
+      localStorage.setItem("userEmail", email);
+
+      alert("Login berhasil!");
+
+      // Contoh redirect ke halaman home setelah login
+      navigate("/");
+
+      // Reset form
+      setEmail("");
+      setPassword("");
+    } else {
+      // Login gagal
+      setErrorMsg("Email atau password salah.");
+    }
   };
 
   return (
-    <div className="min-h-screen bg-green-50 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-green-50 flex flex-col items-center justify-center p-6">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
-        <h1
-          className="text-3xl font-bold text-green-700 mb-6 text-center"
-          style={{ fontFamily: "'Poppins', sans-serif" }}
+        <Link
+          to="/"
+          className="flex items-center justify-center space-x-2 mb-4"
         >
-          Temu Dataku
-        </h1>
-
+          <img src="/logo.webp" alt="Temudataku Logo" className="w-25" />
+        </Link>
         <form onSubmit={handleSubmit} className="space-y-5">
           {errorMsg && (
             <div className="text-red-600 font-semibold">{errorMsg}</div>
@@ -51,7 +67,7 @@ export default function LoginPage() {
             <input
               id="email"
               type="email"
-              placeholder="you@example.com"
+              placeholder="email@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-3 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"

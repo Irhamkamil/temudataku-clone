@@ -25,9 +25,7 @@ export const sessions = [
 
 export const navLinks = [
   { to: "/", label: "Beranda" },
-  { to: "/mentoring", label: "Mentoring" },
-  { to: "/bootcamp", label: "Bootcamp" },
-  { to: "/latihan", label: "Latihan" }
+  { to: "/produk", label: "Produk" }
 ];
 
 export const services = [
@@ -49,4 +47,10 @@ export const services = [
       "Sesi latihan untuk meningkatkan kemampuan di bidang data science dan machine learning.",
     imageUrl: "/services-img2.jpg"
   }
+];
+
+export const users = [
+  { email: "user1@example.com", password: "examplePassword1" },
+  { email: "user2@example.com", password: "examplePassword2" }
+  // Anda bisa tambah user lain di sini
 ];
